@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:background="@color/PlaystoreCardBG">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		style="@style/SpinnerZenithTheme"
+		android:orientation="vertical">
+
+		<Spinner
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/AtmListSpinner"
+			android:spinnerMode="dialog"
+			style="@style/SpinnerDropDownItemAppTheme"
+			android:dropDownSelector="@color/zenithred"
+			android:background="@color/PlayStoreBG"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:text="Done"
+		android:textColor="@color/White"
+		android:background="@color/zenithred"
+		android:id="@+id/atmBTN"
+		android:layout_marginLeft="50dp"
+		android:layout_marginRight="50dp"/>
+</LinearLayout>

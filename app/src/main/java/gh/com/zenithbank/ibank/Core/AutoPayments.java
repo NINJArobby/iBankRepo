@@ -1,7 +1,6 @@
-package gh.com.zenithbank.ibank;
+package gh.com.zenithbank.ibank.Core;
 
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
@@ -24,7 +23,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+
+import gh.com.zenithbank.ibank.Classes.Bill_Schedule_Class;
+import gh.com.zenithbank.ibank.Classes.Customer;
+import gh.com.zenithbank.ibank.Engines.DBEngine;
+import gh.com.zenithbank.ibank.Engines.IbankEngine;
+import gh.com.zenithbank.ibank.R;
 
 /**
  * Created by Robby on 3/25/2015.
@@ -41,6 +45,10 @@ public class AutoPayments extends Activity
     JsonParser parser;
 
     LinearLayout hook;
+    Button Login;
+    EditText _access;
+    EditText _username;
+    EditText _password;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -58,6 +66,22 @@ public class AutoPayments extends Activity
         else
         {
             setContentView(R.layout.full_login);
+            Login = (Button)findViewById(R.id.AutoPayLogin);
+            _access = (EditText)findViewById(R.id.logintxtAccessEnter);
+            _username = (EditText)findViewById(R.id.logintxtUserEnter);
+            _password = (EditText)findViewById(R.id.logintxtpassEnter);
+
+            Login.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    progressDialog = ProgressDialog.show(AutoPayments.this,
+                            "Logging In", "Please Wait...");
+                    new DoLogin2InBackground().execute();
+                }
+            });
+
         }
     }
 
@@ -111,6 +135,88 @@ public class AutoPayments extends Activity
                 _Security = dbEngine.getSecurityValues();
                 ArrayList logData = ibankEngine.Login(_Security.get(0).toString().trim(),
                         _Security.get(1).toString().trim(),_pass);
+                if (logData.get(1).toString().trim().equals("error"))
+                {
+                    throw new Exception("LoginError");
+                }
+                else
+                {
+                    dbEngine.saveCookie(logData.get(0).toString().trim());
+                    parser = new JsonParser();
+                    String res4 = logData.get(1).toString().trim();
+                    if (res4.equalsIgnoreCase("error"))
+                    {
+                        throw new Exception("error");
+                    }
+                    JsonArray jArray = parser.parse(res4).getAsJsonArray();
+                    for (JsonElement obj : jArray)
+                    {
+                        Customer.AccountBalance cse =
+                                new Gson().fromJson(obj, Customer.AccountBalance.class);
+                        dbEngine.updateBalancesTable(
+                                cse.acctType,
+                                cse.acctNo,
+                                cse.acctDesc,
+                                cse.isoCurrency,
+                                Double.toString(cse.curBal),
+                                Double.toString(cse.acctAvail),
+                                Integer.toString(cse.holdBal),
+                                cse.title1
+                                                    );
+                    }
+                }
+
+                done = true;
+            }
+
+            catch (Exception ex)
+            {
+                ex.getMessage();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute (String s)
+        {
+            if (done)
+            {
+                progressDialog.dismiss();
+                runOnUiThread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        setContentView(R.layout.pending_payments);
+                        hook = (LinearLayout)findViewById(R.id.BillsHook);
+                        laodSchedules();
+                    }
+                });
+
+            }
+            else
+            {
+                progressDialog.dismiss();
+                Error();
+            }
+
+        }
+    }
+
+    class DoLogin2InBackground extends AsyncTask<String, String, String>
+    {
+        boolean done = false;
+
+        @Override
+        protected String doInBackground(String... strings)
+        {
+            try
+            {
+                _Security = dbEngine.getSecurityValues();
+                ArrayList logData = ibankEngine.Login(_access.getText().toString().trim(),
+                        _username.getText().toString().trim(),
+                        _password.getText().toString().trim());
                 if (logData.get(1).toString().trim().equals("error"))
                 {
                     throw new Exception("LoginError");
@@ -271,7 +377,6 @@ public class AutoPayments extends Activity
                    });
 
                    tableRow1.addView(Status1);
-
                }
 
                 tableRow1.addView(dueDate1);

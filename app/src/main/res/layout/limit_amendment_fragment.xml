@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/PlaystoreCardBG">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="Card Type"
+					android:background="@color/zenithred"/>
+				<RadioButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="VISA"
+					android:textColor="@color/zenithred"
+					style="@style/RadioButtonZenithTheme"
+					android:background="@color/PlayStoreBG"
+					android:checked="false"
+					android:id="@+id/RdoBtnVisa"/>
+				<RadioButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="EAZY PAY"
+					android:textColor="@color/zenithred"
+					style="@style/RadioButtonZenithTheme"
+					android:background="@color/PlayStoreBG"
+					android:id="@+id/RdoBtnEazyPay"/>
+			</LinearLayout>
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				style="@style/SpinnerZenithTheme">
+
+				<Spinner
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:id="@+id/CardAccountSpinner"
+					style="@style/SpinnerZenithTheme"
+					android:spinnerMode="dropdown"
+					android:background="@color/PlayStoreBG"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal">
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:id="@+id/EdTxtCardNo"
+					android:text="Card Number"
+					android:textColor="@color/zenithred"
+					style="@style/EditTextZenithTheme"
+					/>
+
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:id="@+id/EdTxtCardMobileNo"
+					android:text="Mobile Number"
+					android:textColor="@color/zenithred"
+					style="@style/EditTextZenithTheme"
+					/>
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".7"
+						android:text="Current Limit"
+						android:background="@color/zenithred"
+						android:textColor="#ffffffff"
+						android:textSize="20dp"
+						android:gravity="center"
+						android:layout_marginBottom="2dp"/>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".3"
+						style="@style/EditTextZenithTheme">
+						<EditText
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:background="@color/PlayStoreBG"
+							android:id="@+id/EdtxtLimitAmendmentCurrentLimit"/>
+					</LinearLayout>
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".7"
+							android:text="New Limit"
+							android:background="@color/zenithred"
+							android:textColor="#ffffffff"
+							android:textSize="20dp"
+							android:gravity="center"
+							android:layout_marginTop="2dp"/>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".3"
+							style="@style/EditTextZenithTheme">
+							<EditText
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:background="@color/PlayStoreBG"
+								android:id="@+id/EdtxtLimitAmendmentNewLimit"/>
+						</LinearLayout>
+
+
+					</LinearLayout>
+				</LinearLayout>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:orientation="vertical"
+						>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".7"
+							android:layout_marginTop="1dp">
+
+							<EditText
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:text="Outlet"
+								android:background="@color/zenithred"
+								android:layout_marginRight="5dp"/>
+						</LinearLayout>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".3"
+							android:background="@color/PlayStoreBG"
+							android:layout_marginRight="1dp">
+							<RadioButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:text="ATM"
+								android:textColor="@color/zenithred"
+								style="@style/RadioButtonZenithTheme"
+								android:background="@color/PlayStoreBG"
+								android:checked="false"
+								android:id="@+id/RdoBtnOutletATM"
+								android:textSize="10dp"/>
+
+							<RadioButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:text="POS/Online/Moto"
+								android:textColor="@color/zenithred"
+								style="@style/RadioButtonZenithTheme"
+								android:background="@color/PlayStoreBG"
+								android:checked="false"
+								android:id="@+id/RdoBtnOutletOther"
+								android:textSize="10dp"/>
+						</LinearLayout>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:orientation="vertical"
+						android:layout_marginLeft="1dp">
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".7">
+
+							<EditText
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:text="Type"
+								android:background="@color/zenithred"
+								/>
+						</LinearLayout>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".3">
+							<RadioButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:text="Permanent"
+								android:textColor="@color/zenithred"
+								style="@style/RadioButtonZenithTheme"
+								android:background="@color/PlayStoreBG"
+								android:checked="false"
+								android:id="@+id/RdoBtnTypePermanent"
+								android:textSize="10dp"/>
+							<RadioButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:text="Temporal"
+								android:textColor="@color/zenithred"
+								style="@style/RadioButtonZenithTheme"
+								android:background="@color/PlayStoreBG"
+								android:id="@+id/RdoBtTypeTemp"
+								android:checked="false"
+								android:textSize="10dp"/>
+						</LinearLayout>
+					</LinearLayout>
+
+				</LinearLayout>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<Button
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="@color/zenithred"
+						android:layout_marginLeft="50dp"
+						android:layout_marginRight="50dp"
+						android:text="Submit Request"
+						android:id="@+id/btnLimitRequest"
+						android:layout_marginTop="5dp"
+						android:layout_marginBottom="5dp"/>
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+
+
+	</LinearLayout>
+
+
+
+</LinearLayout>

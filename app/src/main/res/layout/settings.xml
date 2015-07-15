@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="#ffffffff">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight=".9">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight=".9"
+			android:background="@color/zenithred"
+			>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight=".8"
+					android:background="@color/zenithred"
+					android:src="@drawable/logo3"
+					android:layout_gravity="bottom"
+					android:id="@+id/HomeHub"/>
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@color/zenithred"
+					android:text="Settings"
+					android:id="@+id/CustomerName"
+					android:textSize="17dp"
+					android:textColor="#ffffffff"
+					android:layout_weight=".2"
+					android:singleLine="true"
+					android:gravity="left|bottom"/>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight=".1"
+		android:orientation="vertical">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight=".1"
+			android:orientation="vertical">
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical">
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:text="Enable Easy Login"
+							android:textColor="@color/zenithred"
+							android:layout_weight="1"
+							android:gravity="center"/>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1">
+
+							<CheckBox
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								style="@style/CheckBoxZenithTheme"
+								android:id="@+id/chkBxEasyLogin"/>
+						</LinearLayout>
+
+					</LinearLayout>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:text="Enable Transaction Notification"
+							android:textColor="@color/zenithred"
+							android:layout_weight="1"
+							android:gravity="center"/>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1">
+
+							<CheckBox
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								style="@style/CheckBoxZenithTheme"
+								android:id="@+id/chkBxPrompt"/>
+						</LinearLayout>
+
+					</LinearLayout>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight="1">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:text="Enable ATM Locator"
+							android:textColor="@color/zenithred"
+							android:layout_weight="1"
+							android:gravity="center"/>
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight="1">
+
+							<CheckBox
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								style="@style/CheckBoxZenithTheme"
+								android:id="@+id/chkBxATM_Locator"/>
+						</LinearLayout>
+
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+				</LinearLayout>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+				</LinearLayout>
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight=".9">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/btnSettings"
+				android:text="Save"
+				android:background="@color/zenithred"/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+
+</LinearLayout>

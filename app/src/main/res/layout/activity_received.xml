@@ -1,0 +1,319 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".ReceiveActivity"
+              android:orientation="vertical" android:background="@color/PlayStoreBG"
+             >
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:background="@color/zenithred"
+                android:layout_weight=".9"
+            >
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Zprompt"
+                    android:id="@+id/textView"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:gravity="bottom"
+                    android:background="@color/zenithred"
+                    android:textSize="25dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/logo3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardbg2">
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtDt1"
+                              android:text="Date"
+                              android:textSize="20dp"
+                              android:layout_weight=".7"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtDate"
+                              android:textSize="20dp"
+                              android:layout_weight=".3"
+                              android:textColor="@color/zenithred"
+                              android:layout_gravity="left"
+                              android:gravity="left|bottom"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="@drawable/cardbg2">
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtacct"
+                              android:text="Account"
+                              android:textSize="20dp"
+                              android:layout_weight=".7"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtAcctNo"
+                              android:textSize="20dp"
+                              android:layout_weight=".3"
+                              android:layout_gravity="left"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardbg2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Amount"
+                        android:textSize="20dp"
+                        android:layout_weight=".7"
+                        android:textColor="@color/zenithred"
+                        android:gravity="left|bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtAmount"
+                        android:textSize="20dp"
+                        android:layout_weight=".3"
+                        android:textColor="@color/zenithred"
+                        android:layout_gravity="left"
+                        android:gravity="left|bottom"/>
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/list_item_seperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardbg2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txttp"
+                              android:text="Type"
+                              android:textSize="20dp"
+                              android:layout_weight=".7"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txttype"
+                              android:textSize="20dp"
+                              android:layout_weight=".3"
+                              android:textColor="@color/zenithred"
+                              android:layout_gravity="left"
+                              android:gravity="left|bottom"/>
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/list_item_seperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardbg2">
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight=".7"
+                              android:id="@+id/txtdes"
+                              android:text="Desc"
+                              android:textSize="20dp"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtDescription"
+                              android:layout_weight=".3"
+                              android:textColor="@color/zenithred"
+                              android:layout_gravity="left"
+                              android:textSize="15dp"
+                              android:gravity="left|bottom"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardbg2">
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtcurr"
+                              android:text="Currency"
+                              android:textSize="20dp"
+                              android:layout_weight=".7"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtCurrency"
+                              android:textSize="20dp"
+                              android:layout_weight=".3"
+                              android:textColor="@color/zenithred"
+                              android:layout_gravity="left"
+                              android:gravity="left|bottom"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cardbg2">
+
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtbrch"
+                              android:text="Branch"
+                              android:textSize="20dp"
+                              android:layout_weight=".7"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:id="@+id/txtBranch"
+                              android:textSize="20dp"
+                              android:layout_weight=".3"
+                              android:textColor="@color/zenithred"
+                              android:gravity="left|bottom"/>
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/list_item_seperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/light_grey" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:background="@drawable/logo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp">
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+    </LinearLayout>

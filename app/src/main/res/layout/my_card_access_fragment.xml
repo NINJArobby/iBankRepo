@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/PlaystoreCardBG">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="vertical">
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".6"
+				android:text="Request Type"
+				android:background="@color/zenithred"
+				android:textColor="#ffffffff"
+				android:textSize="20dp"
+				android:gravity="center"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".4"
+				android:orientation="horizontal"
+				android:background="@color/PlayStoreBG">
+
+				<CheckBox
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight=".7"
+					android:text="New"
+					android:checked="false"
+					android:id="@+id/ChkBxNewRequest"
+					android:textColor="@color/zenithred"
+					/>
+				<CheckBox
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight=".3"
+					android:text="Regeneration"
+					android:checked="false"
+					android:id="@+id/ChcbxRegeneration"
+					android:textColor="@color/zenithred"/>
+			</LinearLayout>
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="1dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".6"
+				android:text="Account Number"
+				android:background="@color/zenithred"
+				android:textColor="#ffffffff"
+				android:textSize="20dp"
+				android:gravity="center"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".4"
+				style="@style/SpinnerAppTheme"
+				android:theme="@style/SpinnerAppTheme">
+				<Spinner
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/SpnRequestAccountNumber"
+					android:background="@color/PlayStoreBG"
+					android:spinnerMode="dropdown"
+					android:theme="@style/SpinnerAppTheme"
+					style="@style/SpinnerAppTheme"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="1dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".6"
+				android:text="Card Number"
+				android:background="@color/zenithred"
+				android:textColor="#ffffffff"
+				android:textSize="20dp"
+				android:gravity="center"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".4"
+				style="@style/EditTextZenithTheme">
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/EdtxtRequestCardNumber"
+					android:background="@color/PlayStoreBG"/>
+			</LinearLayout>
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="1dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".6"
+				android:text="Mobile Number"
+				android:background="@color/zenithred"
+				android:textColor="#ffffffff"
+				android:textSize="20dp"
+				android:gravity="center"/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".4"
+				style="@style/EditTextZenithTheme"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp">
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/EdtxtRequestPhoneNumber"
+					android:background="@color/PlayStoreBG"/>
+			</LinearLayout>
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="1dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".6"
+				android:text="Email"
+				android:background="@color/zenithred"
+				android:textColor="#ffffffff"
+				android:textSize="20dp"
+				android:gravity="center"
+				/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".4"
+				style="@style/EditTextZenithTheme">
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/EdtxtRequestEmail"
+					android:background="@color/PlayStoreBG"/>
+			</LinearLayout>
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/BtnCardAccess"
+				android:background="@color/zenithred"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+				android:text="Submit"
+				android:textColor="#ffffffff"/>
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+</LinearLayout>

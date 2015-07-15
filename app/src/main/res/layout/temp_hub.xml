@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="#eeeeee">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:background="@drawable/card_background"
+		android:layout_marginBottom="5dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight=".3">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".8"
+				android:background="@color/zenithred"
+				android:src="@drawable/logo3"
+				android:layout_gravity="bottom"
+				/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/zenithred"
+				android:text="Robert Adwini"
+				android:id="@+id/CustomerName"
+				android:gravity="bottom"
+				android:textSize="17dp"
+				android:textColor="#ffffffff"
+				android:layout_weight=".2"
+				android:singleLine="true"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight=".7">
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".1"
+				android:background="@color/zenithred"
+				android:src="@drawable/settings"
+				android:id="@+id/settings"
+				/>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight=".1"
+				android:background="@color/zenithred"
+				android:src="@drawable/swiperight"
+				android:id="@+id/showPrompts"
+				/>
+
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_weight=".2"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp">
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight=".1"
+			android:orientation="vertical"
+			>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_marginBottom="1dp"
+				android:orientation="vertical"
+				>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="horizontal"
+					android:id="@+id/PaymentLayout1"
+					android:background="@drawable/cardbg2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp">
+
+					<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".7"
+						android:background="@drawable/payw"
+						android:layout_marginLeft="2dp"
+						android:layout_marginTop="2dp"
+						android:layout_marginRight="2dp"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".3"
+						android:orientation="vertical"
+						android:background="#ffffffff">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".7"
+							android:textSize="17dp"
+							android:textColor="#ffffff"
+							android:text="BILL PAYMENTS"
+							android:gravity="left|center_vertical|center_horizontal"
+							android:background="@color/zenithred"/>
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:background="@color/zenithred"/>
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".3"
+							android:textSize="15dp"
+							android:textColor="@color/zenithred"
+							android:text="DSTV,GoTV,Shell Card..."
+							android:gravity="center_vertical|center_horizontal"
+							/>
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+
+
+
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+				android:id="@+id/TransfersLayout1"
+				android:layout_marginTop="2dp"
+				android:background="@drawable/cardbg2"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp">
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight=".7"
+					android:background="#ffffffff"
+					android:layout_marginLeft="2dp"
+					android:layout_marginTop="2dp"
+					android:layout_marginRight="2dp"
+					android:src="@drawable/banktccounttransfers"/>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight=".3"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".7"
+						android:textSize="17dp"
+						android:textColor="@color/White"
+						android:text="TRANSFERS"
+						android:gravity="left|center_vertical|center"
+						android:background="@color/zenithred"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="1dp"
+						android:background="@color/zenithred"/>
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".3"
+						android:textSize="15dp"
+						android:textColor="@color/zenithred"
+						android:text="InterBank, Intra Account..."
+						android:gravity="center_vertical|center_horizontal"
+						/>
+				</LinearLayout>
+
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_marginTop="2.5dp"
+				android:layout_marginBottom="2.5dp"
+				>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:layout_marginRight="5dp"
+					android:orientation="horizontal"
+					android:id="@+id/HistoryLayout1"
+					android:background="@drawable/cardbg2"
+					android:layout_marginLeft="5dp">
+
+					<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".7"
+						android:background="@drawable/eeee"
+						android:layout_marginLeft="2dp"
+						android:layout_marginTop="2dp"
+						android:layout_marginRight="2dp"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".3"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".7"
+							android:textSize="17dp"
+							android:textColor="@color/white"
+							android:text="HISTORY"
+							android:gravity="left|center"
+							android:background="@color/zenithred"/>
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:background="@color/zenithred"/>
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".3"
+							android:textSize="15dp"
+							android:textColor="@color/zenithred"
+							android:text="Search, Save, Download..."
+							android:gravity="center_vertical|center_horizontal"
+							/>
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:layout_marginTop="2dp"
+				android:layout_marginBottom="2.5dp"
+				>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:layout_marginRight="5dp"
+					android:orientation="horizontal"
+					android:id="@+id/RsmLayout1"
+					android:layout_marginLeft="5dp"
+					android:background="@drawable/cardbg2">
+
+					<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".7"
+						android:layout_marginLeft="2dp"
+						android:layout_marginTop="2dp"
+						android:layout_marginRight="2dp"
+						android:src="@drawable/credit1"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_weight=".3"
+						android:orientation="vertical">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".7"
+							android:textSize="17dp"
+							android:text="MY CARD ACCESS"
+							android:gravity="left|center"
+							android:textColor="@color/white"
+							android:background="@color/zenithred"/>
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="1dp"
+							android:background="@color/zenithred"/>
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_weight=".3"
+							android:textSize="15dp"
+							android:text="Requests,Complaints, Enquiry..."
+							android:gravity="center_vertical|center_horizontal"
+							android:textColor="@color/zenithred"
+							/>
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+
+
+
+		</LinearLayout>
+
+
+
+	</LinearLayout>
+
+
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="horizontal"
+		android:layout_marginTop="2dp"
+		android:background="@drawable/cardbg2"
+		>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="right"
+			>
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="match_parent"
+				android:id="@+id/facebook"
+				android:src="@drawable/fbook"
+				/>
+		</LinearLayout>
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="left|center"
+			android:text="Like us on facebook"
+			android:textColor="@color/Blue"/>
+	</LinearLayout>
+</LinearLayout>
